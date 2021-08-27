@@ -1,95 +1,71 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-var bannerItems= ["Help1","Help2","Help3"];
-var bannerImage=[
-
+var bannerItems = ["Burger", "Cheese Chilly", "Noodles", "Pizza"];
+var bannerImage = [
   "assets/images/help3.jpg",
   "assets/images/help3.jpg",
   "assets/images/help3.jpg",
+  "assets/images/help3.jpg"
 ];
 class HomeScreen extends StatelessWidget {
   static const String id= 'home-screen';
+
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-     body:Container(
-       margin: EdgeInsets.only(top:8),
-         child: ListView(
-           physics: ClampingScrollPhysics() ,
-           children: <Widget>[
-             Container(
-               margin: EdgeInsets.only(left:10,right:16),
-               child: Row(
-                 children: <Widget>[
-                   Container(
-                     height: 59,
-                     width:59,
-                     decoration: BoxDecoration(
-                       borderRadius: BorderRadius.circular(40),
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
 
-                       image: DecorationImage(image: AssetImage('assets/images/kindle.jfif'))
-                     ),
-                   ),
-                   SizedBox(
-                     width: 70,
-                   ),
-                   Text('KindleNgo',
-                   style:TextStyle(
-                     color: Colors.black54,
-                     fontWeight: FontWeight.bold,
-                     fontSize: 30,
+    return Scaffold(
+      body: Container(
+        height: screenHeight,
+        width: screenWidth,
+        child: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        IconButton(icon: Icon(Icons.menu), onPressed: () {}),
+                        Text(
+                          "Foodies",
+                          style: TextStyle(fontSize: 50, fontFamily: "Samantha"),
+                        ),
+                        IconButton(icon: Icon(Icons.person), onPressed: () {})
+                      ],
+                    ),
+                  ),
+                  BannerWidgetArea(),
 
-                   ))
-                 ],
+                ],
+              ),
+            )),
+      ),
 
-               ),
-             ),
-             SizedBox(
-               height: 20,
-             ),
-             Padding(
-
-               padding:EdgeInsets.only(left:16),
-               child: Column(
-                 crossAxisAlignment: CrossAxisAlignment.start,
-                 children: [
-                   Text('Great future is in good charity',style: GoogleFonts.inter(
-                     fontSize: 20,
-                     fontWeight: FontWeight.w500,
-                     color: Colors.black,
-                   ) ),
-                   BannerWidgetArea()
-                 ],
-
-               ),
-             ),
-
-
-           ],
-         ),
-
-     )
-   );
-
-
-
+    );
   }
 }
+
 class BannerWidgetArea extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var screenWidth = 80;
+    var screenWidth = MediaQuery.of(context).size.width;
 
     PageController controller =
     PageController(viewportFraction: 0.8, initialPage: 1);
 
-    // List<Widget> bann = [];
+    List<Widget> banners = new List<Widget>();
 
     for (int x = 0; x < bannerItems.length; x++) {
-     return Padding(
+      var bannerView = Padding(
         padding: EdgeInsets.all(10.0),
         child: Container(
           child: Stack(
@@ -142,7 +118,17 @@ class BannerWidgetArea extends StatelessWidget {
           ),
         ),
       );
-
+      banners.add(bannerView);
     }
+
+    return Container(
+      width: screenWidth,
+      height: screenWidth * 8/ 16,
+      child: PageView(
+        controller: controller,
+        scrollDirection: Axis.horizontal,
+        children: banners,
+      ),
+    );
   }
 }
