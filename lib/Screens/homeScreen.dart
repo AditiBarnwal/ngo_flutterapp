@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-var bannerItems = ["Burger", "Cheese Chilly", "Noodles", "Pizza"];
+var bannerItems = ["Help1", "Help2", "Help3", "Help4"];
 var bannerImage = [
   "assets/images/help3.jpg",
   "assets/images/help3.jpg",
@@ -13,12 +13,14 @@ var bannerImage = [
   "assets/images/help3.jpg"
 ];
 class HomeScreen extends StatelessWidget {
+
   static const String id= 'home-screen';
 
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
     var screenWidth = MediaQuery.of(context).size.width;
+
 
     return Scaffold(
       body: Container(
@@ -27,7 +29,7 @@ class HomeScreen extends StatelessWidget {
         child: SafeArea(
             child: SingleChildScrollView(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
@@ -36,19 +38,106 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         IconButton(icon: Icon(Icons.menu), onPressed: () {}),
                         Text(
-                          "Foodies",
+                          "Charity",
                           style: TextStyle(fontSize: 50, fontFamily: "Samantha"),
                         ),
                         IconButton(icon: Icon(Icons.person), onPressed: () {})
                       ],
                     ),
                   ),
+
                   BannerWidgetArea(),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+
+                      children: [
+                        Text("Categories"),
+                        SizedBox(
+
+                          height: MediaQuery.of(context).size.height,
+
+                          child: GridView.count(
+
+                              primary: false,
+                              padding: const EdgeInsets.all(2),
+                              crossAxisSpacing: 20,
+                              mainAxisSpacing: 15,
+                              crossAxisCount: 2,
+                             children:[
+                              Container(
+                                height: 300,
+                                child: Card(
+                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Image.asset('assets/images/help3.jpg',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                               Container(
+                                 height: 300,
+                                 child: Card(
+                                   shape: RoundedRectangleBorder(
+                                       borderRadius: BorderRadius.circular(10)
+                                   ),
+                                   color: Colors.blue,
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(10.0),
+                                     child: Image.asset('assets/images/help3.jpg',
+                                     ),
+                                   ),
+                                 ),
+                               ),
+                               Container(
+                                 height: 300,
+                                 child: Card(
+                                   shape: RoundedRectangleBorder(
+                                       borderRadius: BorderRadius.circular(10)
+                                   ),
+                                   color: Colors.blue,
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(10.0),
+                                     child: Image.asset('assets/images/help3.jpg',
+                                     ),
+                                   ),
+                                 ),
+                               ),
+                               Container(
+                                 height: 300,
+                                 child: Card(
+                                   shape: RoundedRectangleBorder(
+                                       borderRadius: BorderRadius.circular(10)
+                                   ),
+                                   color: Colors.blue,
+                                   child: Padding(
+                                     padding: const EdgeInsets.all(10.0),
+                                     child: Image.asset('assets/images/help3.jpg',
+                                     ),
+                                   ),
+                                 ),
+                               ),
+
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+
 
                 ],
               ),
             )),
       ),
+
 
     );
   }
@@ -108,7 +197,7 @@ class BannerWidgetArea extends StatelessWidget {
                       style: TextStyle(fontSize: 25.0, color: Colors.white),
                     ),
                     Text(
-                      "More than 40% Off",
+                      "We rise by lifting others",
                       style: TextStyle(fontSize: 12.0, color: Colors.white),
                     )
                   ],
@@ -117,7 +206,9 @@ class BannerWidgetArea extends StatelessWidget {
             ],
           ),
         ),
+
       );
+
       banners.add(bannerView);
     }
 
