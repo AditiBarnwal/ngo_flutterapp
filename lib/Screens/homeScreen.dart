@@ -31,6 +31,7 @@ class HomeScreen extends StatelessWidget {
 
 
     return Scaffold(
+      backgroundColor: Color(0xfff6f6f6),
       body: Container(
         height: screenHeight,
         width: screenWidth,
@@ -65,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                         Text("Categories"),
                         SizedBox(
 
-                          height: MediaQuery.of(context).size.height,
+                          height: MediaQuery.of(context).size.height-400,
 
                           child: GridView.count(
 
@@ -142,36 +143,154 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
+                    child: Container(
+                     decoration: BoxDecoration(
+                       borderRadius: BorderRadius.circular(12),
+                       color: Colors.white,
+                     boxShadow: [
+                       BoxShadow(
+                         color: Colors.grey.withOpacity(0.2),
+                         spreadRadius: 6,
+                         offset: Offset(0,8)
+                       )
+                     ]
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                                child: Image.asset("assets/images/help3.jpg")),
+                            Text("NGO1",style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            Text("ABOUT NGO1",style: TextStyle(
 
-                    children:<Widget> [
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                  child: Image.asset("assets/images/help3.jpg")),
-                              Text("NGO1",style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                              ),),
-                              Text("ABOUT NGO1",style: TextStyle(
-
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                              ),),
-                            ],
-                          ),
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                            ),),
+                          ],
                         ),
-
                       ),
 
-                    ],
-                  )
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.withOpacity(0.2),
+                                spreadRadius: 6,
+                                offset: Offset(0,8)
+                            )
+                          ]
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset("assets/images/help3.jpg")),
+                            Text("NGO1",style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            Text("ABOUT NGO1",style: TextStyle(
+
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                            ),),
+                          ],
+                        ),
+                      ),
+
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.withOpacity(0.2),
+                                spreadRadius: 6,
+                                offset: Offset(0,8)
+                            )
+                          ]
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset("assets/images/help3.jpg")),
+                            Text("NGO1",style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            Text("ABOUT NGO1",style: TextStyle(
+
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                            ),),
+                          ],
+                        ),
+                      ),
+
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.withOpacity(0.2),
+                                spreadRadius: 6,
+                                offset: Offset(0,8)
+                            )
+                          ]
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset("assets/images/help3.jpg")),
+                            Text("NGO1",style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            Text("ABOUT NGO1",style: TextStyle(
+
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                            ),),
+                          ],
+                        ),
+                      ),
+
+                    ),
+                  ),
                  
 
                 ],
