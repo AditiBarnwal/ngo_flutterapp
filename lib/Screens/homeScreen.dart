@@ -1,6 +1,9 @@
 
 
+
+
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,7 +18,12 @@ var bannerImage = [
 class HomeScreen extends StatelessWidget {
 
   static const String id= 'home-screen';
-
+  List categories=[
+    "assets/images/help3.jpg",
+    "assets/images/help3.jpg",
+    "assets/images/help3.jpg",
+    "assets/images/help3.jpg"
+  ];
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
@@ -53,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
 
-                      children: [
+                      children: <Widget>[
                         Text("Categories"),
                         SizedBox(
 
@@ -61,18 +69,18 @@ class HomeScreen extends StatelessWidget {
 
                           child: GridView.count(
 
-                              primary: false,
-                              padding: const EdgeInsets.all(2),
-                              crossAxisSpacing: 20,
-                              mainAxisSpacing: 15,
-                              crossAxisCount: 2,
-                             children:[
+                            primary: false,
+                            padding: const EdgeInsets.all(2),
+                            crossAxisSpacing: 20,
+                            mainAxisSpacing: 15,
+                            crossAxisCount: 2,
+                            children:[
                               Container(
                                 height: 300,
                                 child: Card(
                                   elevation: 5,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)
+                                      borderRadius: BorderRadius.circular(10)
                                   ),
 
                                   child: Padding(
@@ -82,56 +90,89 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                               Container(
-                                 height: 300,
-                                 child: Card(
-                                   shape: RoundedRectangleBorder(
-                                       borderRadius: BorderRadius.circular(10)
-                                   ),
-                                   color: Colors.blue,
-                                   child: Padding(
-                                     padding: const EdgeInsets.all(10.0),
-                                     child: Image.asset('assets/images/help3.jpg',
-                                     ),
-                                   ),
-                                 ),
-                               ),
-                               Container(
-                                 height: 300,
-                                 child: Card(
-                                   shape: RoundedRectangleBorder(
-                                       borderRadius: BorderRadius.circular(10)
-                                   ),
-                                   color: Colors.blue,
-                                   child: Padding(
-                                     padding: const EdgeInsets.all(10.0),
-                                     child: Image.asset('assets/images/help3.jpg',
-                                     ),
-                                   ),
-                                 ),
-                               ),
-                               Container(
-                                 height: 300,
-                                 child: Card(
-                                   shape: RoundedRectangleBorder(
-                                       borderRadius: BorderRadius.circular(10)
-                                   ),
-                                   color: Colors.blue,
-                                   child: Padding(
-                                     padding: const EdgeInsets.all(10.0),
-                                     child: Image.asset('assets/images/help3.jpg',
-                                     ),
-                                   ),
-                                 ),
-                               ),
+                              Container(
+                                height: 300,
+                                child: Card(
+                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)
+                                  ),
+
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Image.asset('assets/images/help3.jpg',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                height: 300,
+                                child: Card(
+                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)
+                                  ),
+
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Image.asset('assets/images/help3.jpg',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                height: 300,
+                                child: Card(
+                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)
+                                  ),
+
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Image.asset('assets/images/help3.jpg',
+                                    ),
+                                  ),
+                                ),
+                              ),
 
                             ],
                           ),
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
 
+                    children:<Widget> [
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                  child: Image.asset("assets/images/help3.jpg")),
+                              Text("NGO1",style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                              ),),
+                              Text("ABOUT NGO1",style: TextStyle(
+
+                                fontSize: 25,
+                                fontWeight: FontWeight.w500,
+                              ),),
+                            ],
+                          ),
+                        ),
+
+                      ),
+
+                    ],
+                  )
+                 
 
                 ],
               ),
