@@ -57,13 +57,24 @@ class HomeScreen extends StatelessWidget {
 
                   BannerWidgetArea(),
 
+                  SizedBox(
+                    height: 8,
+                  ),
+
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
 
                       children: <Widget>[
-                        Text("Categories"),
+                        Text("Categories",style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+
+                        ),),
+                        SizedBox(
+                          height: 12,
+                        ),
                         SizedBox(
 
                           height: MediaQuery.of(context).size.height-400,
@@ -71,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                           child: GridView.count(
 
                             primary: false,
-                            padding: const EdgeInsets.all(2),
+                            padding: const EdgeInsets.all(4),
                             crossAxisSpacing: 20,
                             mainAxisSpacing: 15,
                             crossAxisCount: 2,
@@ -143,6 +154,10 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  Text("Recommended NGO's",style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500,
+                  ),),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
                     child: Container(
@@ -158,7 +173,7 @@ class HomeScreen extends StatelessWidget {
                      ]
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -195,7 +210,7 @@ class HomeScreen extends StatelessWidget {
                           ]
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -232,7 +247,7 @@ class HomeScreen extends StatelessWidget {
                           ]
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -269,7 +284,7 @@ class HomeScreen extends StatelessWidget {
                           ]
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
