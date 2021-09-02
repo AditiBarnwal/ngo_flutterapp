@@ -7,22 +7,22 @@ class Detailpage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          children:<Widget> [
-            Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.fill,
-                        image: AssetImage("assets/images/help3.jpg")),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(30),
-                      bottomRight: Radius.circular(30),
-                    )
-                  ),
-            )),
-            Expanded(
-              child: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            children:<Widget> [
+              Container(
+                height: 400,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                      image: AssetImage("assets/images/help3.jpg")),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30),
+                  )
+                ),
+              ),
+              Container(
                 color: Colors.white,
                 child: ListTile(
                   title: Column(
@@ -52,9 +52,9 @@ class Detailpage extends StatelessWidget {
 
                         ],
                       ),
-                      Text("What started it all, the Santhosa Samsara Family (SS Family) was started by George Ebenezer and Manju George as an orphanage for children from hard places. While they initially started with three children in 2009, the number grew to nine in three years’ time. Once the orphanage had begun to function, George and Manju realised that what the children needed was not an institution, but a family. So, a family is what they becameThe children have received love, care and a good education. They have grown into strong teenagers who are looking to make their own impact on the world. George and Manju’s biological son also lives with them and he loves his older brothers and sisters!",
+                      Text("What started it all, the Santhosa Samsara Family (SS Family) was started by George Ebenezer and Manju George as an orphanage for children from hard places. While they initially started with three children in 2009, the number grew to nine in three years’ time. Once the orphanage had begun to function, George and Manju realised that what the children needed was not an institution, but a family. So, a family is what they becameThe children have received love, care and a good education. They have grown into strong teenagers who are looking to make their own impact on the world. George and Manju’s biological son also lives with them and he loves his older brothers and sisters!What started it all, the Santhosa Samsara Family (SS Family) was started by George Ebenezer and Manju George as an orphanage for children from hard places.",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 18,
                         ),),
 
                     ],
@@ -63,8 +63,8 @@ class Detailpage extends StatelessWidget {
 
 
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
